@@ -2,6 +2,7 @@ import { RouteRecordRaw } from 'vue-router';
 import VueSimpleCalendar from 'src/pages/VueSimpleCalendar.vue';
 import ComparisonPage from 'src/pages/ComparisonPage.vue';
 import OnboardingPage0 from 'src/pages/OnboardingPage0.vue';
+import OnboardingStepper from 'src/pages/OnboardingStepper.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -27,6 +28,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'onboarding0',
         component: OnboardingPage0,
+      },
+      {
+        path: 'onboarding1',
+        component: OnboardingStepper,
       },
     ],
   },

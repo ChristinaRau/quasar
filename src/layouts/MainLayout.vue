@@ -77,15 +77,15 @@ const componentsList: EssentialLinkProps[] = [
 
 const onboardingList: EssentialLinkProps[] = [
   {
-    title: 'Onboarding Page 0',
+    title: 'Welcome Page',
     link: '/#/onboarding0',
   },
   {
-    title: 'Onboarding Page 1',
+    title: 'Onboarding (Quasar)',
     link: '/#/onboarding1',
   },
   {
-    title: 'Onboarding Page 2',
+    title: 'Onboarding (PrimeVue)',
     link: '/#/onboarding2',
   },
 ];
