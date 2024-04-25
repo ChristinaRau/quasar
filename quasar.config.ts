@@ -63,6 +63,8 @@ export default configure((ctx) => {
           hmr: {
             overlay: false,
           },
+          host: true,
+          port: 9000,
         });
       },
       // viteVuePluginOptions: {},

@@ -262,7 +262,35 @@
       </q-step>
 
       <q-step :name="4" title="Impfpass" icon="fa-solid fa-4">
-        Lorem ipsum.
+        <div class="flex flex-col items-center gap-y-4 mb-16">
+          <div>Sie kennen Ihren Impfstatus nicht?</div>
+          <q-btn label="Titerbestimmung Termin vereinbaren" color="primary" />
+        </div>
+
+        <div class="mt-10 flex flex-col items-center">
+          <div class="text-xl mb-2">
+            Ihr internationaler Impfpass in Bildern
+          </div>
+          <div class="mb-6">
+            Fotografieren Sie Ihren alten Impfpass und laden Sie die Bilder hoch
+          </div>
+          <!-- <div v-if="uploader !== undefined" class="flex justify-center">
+            <div v-for="item in uploader.files" :key="item.name">
+              <q-chip outline square :label="item.name"></q-chip>
+            </div>
+          </div> -->
+          <div class="lg:w-4/12">
+            <q-uploader
+              ref="uploader"
+              url="http://localhost:4444/upload"
+              label="Dateien auswählen"
+              multiple
+              batch
+              style="width: 100%"
+              accept="image/*,application/pdf"
+            />
+          </div>
+        </div>
       </q-step>
 
       <template v-slot:navigation>
@@ -289,7 +317,9 @@
 import { QStepper } from 'quasar';
 import { ref, reactive } from 'vue';
 
+// template refs
 const stepper = ref();
+const uploader = ref();
 
 const patient: Patient = reactive({
   firstName: '',
